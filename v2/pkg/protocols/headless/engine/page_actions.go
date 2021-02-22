@@ -212,6 +212,7 @@ func (p *Page) ClickElement(act *Action, out map[string]string) error {
 	if err = element.Click(proto.InputMouseButtonLeft); err != nil {
 		return errors.Wrap(err, "could not click element")
 	}
+	time.Sleep(100 * time.Millisecond)
 	return nil
 }
 
